@@ -25,7 +25,7 @@ export default function MenuCarousel({ items }: { items: Item[] }) {
 
   return (
     <div>
-      <div className="flex items-center justify-end gap-2 pb-6">
+      <div className="flex items-center justify-end gap-2 pb-6 lg:hidden">
         <button
           aria-label="Scroll left"
           onClick={() => scroll(-1)}

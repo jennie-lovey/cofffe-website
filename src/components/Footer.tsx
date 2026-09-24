@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InstagramIcon, FacebookIcon } from "@/components/icons";
 import { NAV_LINKS } from "@/lib/data";
 
 export default function Footer() {
@@ -49,15 +50,27 @@ export default function Footer() {
             <p className="font-grotesk text-xs font-bold uppercase tracking-[0.15em] text-terracotta">
               Connect
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-chalk/70">
+            <ul className="mt-4 space-y-2.5 text-sm text-chalk/70">
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-chalk">
-                  Instagram ↗
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 transition-colors hover:text-chalk"
+                >
+                  <InstagramIcon size={16} />
+                  Instagram
                 </a>
               </li>
               <li>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-chalk">
-                  Facebook ↗
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 transition-colors hover:text-chalk"
+                >
+                  <FacebookIcon size={16} />
+                  Facebook
                 </a>
               </li>
             </ul>
