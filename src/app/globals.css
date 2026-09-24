@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Core Palette ── */
+  --terracotta: #c8482b;       /* vibrant brand accent */
+  --terracotta-dark: #a83820;  /* darker hover state */
+  --terracotta-light: #e05a3c; /* light highlight */
+  --terracotta-soft: #fcf1ef;  /* subtle badge / light surface tint */
+
+  --chalk: #faf6f0;            /* main page canvas warm off-white */
+  --chalk-warm: #f3ece2;       /* secondary section background */
+  --chalk-white: #ffffff;      /* clean white card surface */
+
+  --ink: #1c1613;              /* deep espresso headings & body */
+  --ink-soft: #544840;         /* softer body text */
+  --ink-muted: #8c7e75;        /* muted micro-copy */
+
+  --olive: #3b4a2f;            /* dark green secondary accent */
+  --gold: #e8a63a;             /* ratings & gold highlights */
+  --gold-dark: #c88a20;
+
+  --line: rgba(28, 22, 19, 0.08); /* clean subtle line border */
+
+  /* Backwards-compat aliases for existing components */
+  --background: var(--chalk);
+  --foreground: var(--ink);
+  --cream: var(--chalk);
+  --cream-stripe: var(--chalk-warm);
+  --tan: #c9a06b;
+  --espresso: var(--ink);
+  --espresso-soft: var(--ink-soft);
+  --panel: var(--chalk-white);
+  --rust: var(--terracotta);
+  --rust-dark: var(--terracotta-dark);
+}
+
+@theme inline {
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-terracotta-soft: var(--terracotta-soft);
+
+  --color-chalk: var(--chalk);
+  --color-chalk-warm: var(--chalk-warm);
+  --color-chalk-white: var(--chalk-white);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+
+  --color-olive: var(--olive);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+
+  /* Aliases */
+  --color-background: var(--chalk);
+  --color-foreground: var(--ink);
+  --color-cream: var(--chalk);
+  --color-cream-stripe: var(--chalk-warm);
+  --color-tan: #c9a06b;
+  --color-espresso: var(--ink);
+  --color-espresso-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-panel: var(--chalk-white);
+  --color-rust: var(--terracotta);
+  --color-rust-dark: var(--terracotta-dark);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+  --font-grotesk: var(--font-space-grotesk);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--chalk);
+  color: var(--ink);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility: display condensed font */
+.font-display {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
